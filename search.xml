@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/09/10/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>default</category>
+      </categories>
+      <tags>
+        <tag>default</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写着玩儿的</title>
+    <url>/2024/09/12/rules/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>vue3组件库undraw-ui</title>
+    <url>/2024/09/10/undraw-ui/</url>
+    <content><![CDATA[<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p><a href="https://readpage.github.io/undraw-ui/" title="undraw-ui">Undraw UI</a>是一个基于vue3的UI组件库，主要功能有折叠，评论，锚点，搜索，聊天等组件。</p>
+<h2 id="效率-Efficiency"><a href="#效率-Efficiency" class="headerlink" title="效率 Efficiency"></a>效率 Efficiency</h2><pre><code>* 简化流程： 设计简洁直观的操作流程；
+* 清晰明确： 语言表达清晰且表意明确，让用户快速理解
+  进而作出决策；
+* 帮助用户识别： 界面简单直白，让用户快速识别而非回
+  忆，减少用户记忆负担。
+</code></pre>
+<h2 id="可控-Controllability"><a href="#可控-Controllability" class="headerlink" title="可控 Controllability"></a>可控 Controllability</h2><pre><code>* 用户决策： 根据场景可给予用户操作建议或安全提示，
+  但不能代替用户进行决策；
+* 结果可控： 用户可以自由的进行操作，包括撤销、回退
+  和终止当前操作等。
+</code></pre>
+<h2 id="安装与使用"><a href="#安装与使用" class="headerlink" title="安装与使用"></a>安装与使用</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i element-plus2.6.0 undraw-ui@1.2.1</span><br><span class="line">$ <span class="comment"># elements-plus可以选择需要版本进行安装</span></span><br></pre></td></tr></table></figure>
+<h3 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="comment">#按需导包，下载导包依赖</span></span><br><span class="line">$ npm install -D unplugin-vue-components</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改 vite.config.ts 或 vue.config.js 的配置。</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Components</span> <span class="keyword">from</span> <span class="string">&#x27;unplugin-vue-components/vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">UndrawUiResolver</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;undraw-ui/es/resolvers&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title class_">Components</span>(&#123;</span><br><span class="line">      <span class="attr">resolvers</span>: [<span class="title class_">UndrawUiResolver</span>]</span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;u-comment :config=&quot;config&quot; @submit=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/u-comment&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">// 下载表情包资源emoji.zip https://gitee.com/undraw/undraw-ui/releases/tag/v0.0.0</span><br><span class="line">// static文件放在public下,引入emoji.ts文件可以移动assets下引入,也可以自定义到指定位置</span><br><span class="line">import emoji from &#x27;./emoji&#x27;</span><br><span class="line">import &#123; reactive &#125; from &#x27;vue&#x27;</span><br><span class="line">import &#123; UToast, Time, CommentApi, CommentSubmitApi, ConfigApi &#125; from &#x27;undraw-ui&#x27;</span><br><span class="line"></span><br><span class="line">const config = reactive&lt;ConfigApi&gt;(&#123;</span><br><span class="line">user: &#123;&#125; as any, // 当前用户信息</span><br><span class="line">emoji: emoji, // 表情包数据</span><br><span class="line">comments: [], // 评论数据</span><br><span class="line">relativeTime: true, // 开启人性化时间</span><br><span class="line">show: &#123;</span><br><span class="line">    level: false,    // 关闭等级显示</span><br><span class="line">    homeLink: false, // 关闭个人主页链接跳转</span><br><span class="line">    address: false, // 关闭地址信息</span><br><span class="line">    likes: false    // 关闭点赞按钮显示</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const comments = [</span><br><span class="line">&#123;</span><br><span class="line">    id: &#x27;1&#x27;,</span><br><span class="line">    parentId: null,</span><br><span class="line">    uid: &#x27;2&#x27;,</span><br><span class="line">    content: &#x27;床前明月光，疑是地上霜。&lt;br&gt;举头望明月，低头思故乡。&lt;img class=&quot;a&quot; id=&quot;a&quot; style=&quot;width: 50px&quot; src=a onerror=&quot;window.location.href=\&#x27;https://baidu.com\&#x27;&quot;&gt;&#x27;,</span><br><span class="line">    createTime: new Time().add(-1, &#x27;day&#x27;),</span><br><span class="line">    user: &#123;</span><br><span class="line">    username: &#x27;李白 [唐代]&#x27;,</span><br><span class="line">    avatar: &#x27;https://static.juzicon.com/images/image-231107185110-DFSX.png&#x27;,</span><br><span class="line">    homeLink: &#x27;/1&#x27;</span><br><span class="line">    &#125;,</span><br><span class="line">    reply: &#123;</span><br><span class="line">    total: 1,</span><br><span class="line">    list: [</span><br><span class="line">    &#123;</span><br><span class="line">        id: &#x27;11&#x27;,</span><br><span class="line">        parentId: 1,</span><br><span class="line">        uid: &#x27;1&#x27;,</span><br><span class="line">        content: &#x27;[狗头][微笑2]&#x27;,</span><br><span class="line">        createTime: new Time().add(-3, &#x27;day&#x27;),</span><br><span class="line">        user: &#123;</span><br><span class="line">            username: &#x27;杜甫 [唐代]&#x27;,</span><br><span class="line">            avatar: &#x27;https://static.juzicon.com/images/image-180327173755-IELJ.jpg&#x27;,</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    id: &#x27;2&#x27;,</span><br><span class="line">    parentId: null,</span><br><span class="line">    uid: &#x27;3&#x27;,</span><br><span class="line">    content: &#x27;国破山河在，城春草木深。&lt;br&gt;感时花溅泪，恨别鸟惊心。&lt;br&gt;烽火连三月，家书抵万金。&lt;br&gt;白头搔更短，浑欲不胜簪。&#x27;,</span><br><span class="line">    createTime: new Time().add(-5, &#x27;day&#x27;),</span><br><span class="line">    user: &#123;</span><br><span class="line">    username: &#x27;杜甫 [唐代]&#x27;,</span><br><span class="line">    avatar: &#x27;https://static.juzicon.com/images/image-180327173755-IELJ.jpg&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    id: &#x27;3&#x27;,</span><br><span class="line">    parentId: null,</span><br><span class="line">    uid: &#x27;2&#x27;,</span><br><span class="line">    content: &#x27;日照香炉生紫烟，遥看瀑布挂前川。&lt;br&gt;飞流直下三千尺，疑是银河落九天。&#x27;,</span><br><span class="line">    likes: 34116,</span><br><span class="line">    createTime: new Time().add(-2, &#x27;month&#x27;),</span><br><span class="line">    user: &#123;</span><br><span class="line">    username: &#x27;李白 [唐代]&#x27;,</span><br><span class="line">    avatar: &#x27;https://static.juzicon.com/images/image-231107185110-DFSX.png&#x27;,</span><br><span class="line">    homeLink: &#x27;/1&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">// 模拟请求接口获取评论数据</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">// 当前登录用户数据</span><br><span class="line">config.user = &#123;</span><br><span class="line">    id: 1,</span><br><span class="line">    username: &#x27;杜甫 [唐代]&#x27;,</span><br><span class="line">    avatar: &#x27;https://static.juzicon.com/images/image-180327173755-IELJ.jpg&#x27;,</span><br><span class="line">&#125;</span><br><span class="line">config.comments = comments</span><br><span class="line">&#125;, 500)</span><br><span class="line"></span><br><span class="line">// 评论提交事件</span><br><span class="line">let temp_id = 100</span><br><span class="line">// 提交评论事件</span><br><span class="line">const submit = (&#123; content, parentId, finish &#125;: CommentSubmitApi) =&gt; &#123;</span><br><span class="line">let str = &#x27;提交评论:&#x27; + content + &#x27;;\t父id: &#x27; + parentId</span><br><span class="line">console.log(str)</span><br><span class="line"></span><br><span class="line">// 模拟请求接口生成数据</span><br><span class="line">const comment: CommentApi = &#123;</span><br><span class="line">    id: String((temp_id += 1)),</span><br><span class="line">    parentId: parentId,</span><br><span class="line">    uid: config.user.id,</span><br><span class="line">    content: content,</span><br><span class="line">    createTime: new Time().toString(),</span><br><span class="line">    user: &#123;</span><br><span class="line">    username: config.user.username,</span><br><span class="line">    avatar: config.user.avatar</span><br><span class="line">    &#125;,</span><br><span class="line">    reply: null</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">    finish(comment)</span><br><span class="line">    UToast(&#123; message: &#x27;评论成功!&#x27;, type: &#x27;info&#x27; &#125;)</span><br><span class="line">&#125;, 200)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>更多信息请查看GitHub项目：<a href="https://github.com/readpage/undraw-ui">undraw-ui</a></p>
+  <p align="center">
+    <a href="https://readpage.github.io/undraw-ui/">
+        <img src="https://s2.loli.net/2022/04/19/m4aqSs6DINYCLjG.png">
+    </a>
+  </p>
+
+<p>nocopyriht </p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>vue3</tag>
+        <tag>undraw-ui</tag>
+      </tags>
+  </entry>
+</search>
