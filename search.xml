@@ -3,7 +3,8 @@
   <entry>
     <title>Hello World</title>
     <url>/2024/09/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<hr>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -23,11 +24,6 @@
       <tags>
         <tag>default</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>写着玩儿的</title>
-    <url>/2024/09/12/rules/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>正则表达式</title>
@@ -68,6 +64,49 @@
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sass基础</title>
+    <url>/2024/09/20/sassLearn./</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://sass-lang.com/">sass</a> 是一个 CSS 预处理语言，完全兼容CSS，扩展了CSS的能力，<br>增加了变量、嵌套规则、混合（Mixins）等功能。SASS有两种语<br>法：缩进式（Indented）和紧凑式（Strict）。缩进式语法类似<br>于Python，使用缩进来定义块；而紧凑式语法则更接近传统的CSS。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pnpm install -g sass </span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，你可以使用sass命令来编译SASS文件。例<br>如，如果你有一个名为styles.scss的SASS文件，你可<br>以运行以下命令来生成对应的CSS文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sass styles.scss styles.css</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>Sass的变量功能允许我们存储和重用数据，以便在样式表中使用。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">    </span><br><span class="line"><span class="comment">// 定义一个变量</span></span><br><span class="line"><span class="variable">$primary-color</span>: <span class="number">#3366ff</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 使用变量</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="variable">$primary-color</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><p>Sass的嵌套功能允许我们定义规则，使其更易于阅读和<br>理解。嵌套规则会自动继承父规则的属性，除非我们显<br>式地覆盖它们。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">    <span class="selector-class">.header</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#3366ff</span>;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="selector-class">.logo</span> &#123;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h4><p>Sass的混合功能允许我们定义一组规则，并将其应用到多个元素上。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> button(<span class="variable">$bg-color</span>, <span class="variable">$text-color</span>) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="variable">$bg-color</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$text-color</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button-primary</span> &#123;</span><br><span class="line">  <span class="keyword">@include</span> button(<span class="number">#3366ff</span>, <span class="number">#fff</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>Sass的函数功能允许我们定义自定义函数，以简化样式表的编写。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@function</span> rem(<span class="variable">$px</span>) &#123;</span><br><span class="line">    <span class="keyword">@return</span> <span class="variable">$px</span> / <span class="number">16</span> * <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">rem</span>(<span class="number">960px</span>);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">rem</span>(<span class="number">600px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p><code>@for</code>和<code>@each</code>，能动态处理数据 </p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@for</span> <span class="variable">$i</span> from <span class="number">1</span> through <span class="number">5</span> &#123;</span><br><span class="line">  <span class="selector-class">.item-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$i</span> * <span class="number">10rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$colors</span>: red, green, blue;</span><br><span class="line"><span class="keyword">@each</span> <span class="variable">$color</span> in <span class="variable">$colors</span> &#123;</span><br><span class="line">    <span class="selector-class">.color-</span>#&#123;<span class="variable">$color</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="variable">$color</span>;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="built_in">darken</span>(<span class="variable">$color</span>, <span class="number">20%</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@if</code>和<code>@else</code>，判断条件</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="variable">$width</span>: <span class="number">960px</span>;</span><br><span class="line"><span class="keyword">@if</span> <span class="variable">$width</span> &gt; <span class="number">768px</span> &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#3366ff</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@else</span> &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="number">#ff3366</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@extend</code>，继承样式</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#3366ff</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button-primary</span> &#123;</span><br><span class="line">    <span class="keyword">@extend</span> .button;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@include</code>，引入样式</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> button(<span class="variable">$bg-color</span>, <span class="variable">$text-color</span>) &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">$bg-color</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$text-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button-primary</span> &#123;</span><br><span class="line">    <span class="keyword">@include</span> button(<span class="number">#3366ff</span>, <span class="number">#fff</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><code>@import</code>，引入文件，只能引入.scss文件，不用加后缀名。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;path/to/file&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p><a href="https://sass-lang.com/">sass</a>提供了详细的模块和函数文档，<br>帮助开发人员了解每个功能的用法和语法。这些文档可以作为Sass<br>开发的参考手册，提供有关如何使用每个功能的详细说明和示例。开发<br>人员可以通过查阅模块和函数手册来了解Sass提供的丰富功能，并在<br>开发过程中进行参考和使用。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
