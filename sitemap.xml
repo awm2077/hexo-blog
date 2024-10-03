@@ -119,14 +119,14 @@
 
   
   <url>
-    <loc>http://xtu-blog.zeabur.app/tags/default/</loc>
+    <loc>http://xtu-blog.zeabur.app/tags/js/</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://xtu-blog.zeabur.app/tags/js/</loc>
+    <loc>http://xtu-blog.zeabur.app/tags/default/</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -156,14 +156,14 @@
 
   
   <url>
-    <loc>http://xtu-blog.zeabur.app/categories/default/</loc>
+    <loc>http://xtu-blog.zeabur.app/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://xtu-blog.zeabur.app/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://xtu-blog.zeabur.app/categories/default/</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
