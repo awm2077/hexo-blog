@@ -26,47 +26,6 @@
       </tags>
   </entry>
   <entry>
-    <title>正则表达式</title>
-    <url>/posts/2f57a694.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><pre><code>正则表达式是一种描述字符组合的模式，能匹配、替换、提取文本，多用于验证表单输入，解析文本文件等任务。
-</code></pre>
-<h3 id="在线测试工具"><a href="#在线测试工具" class="headerlink" title="在线测试工具"></a>在线测试工具</h3><p><a href="https://www.jyshare.com/front-end/854/">菜鸟工具</a></p>
-<h3 id="语法教程参考"><a href="#语法教程参考" class="headerlink" title="语法教程参考"></a>语法教程参考</h3><p><a href="https://www.runoob.com/regexp/regexp-syntax.html">菜鸟教程</a></p>
-<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><table border="1" cellspacing = "0" cellpadding = "5" width="100%" >
-    <tr><td>操作符</td><td>说明</td><td>实例</td></tr>
-    <tr><td>.</td><td>标识任何单个字符</td><td>[abc]表示a,b,c,[a-z]表示a-z单个字符</td></tr>
-    <tr><td>\d</td><td>匹配数字</td><td>\d表示匹配一个数字，[0-9]表示匹配0-9</td></tr>
-    <tr><td>\D</td><td>匹配非数字</td><td>\D表示匹配非数字，[^0-9]表示匹配非0-9</td></tr>
-    <tr><td>\w</td><td>匹配字母数字下划线</td><td>\w表示匹配字母数字下划线，[a-zA-Z0-9_]表示匹配a-zA-Z0-9_</td></tr>
-    <tr><td>[]</td><td>字符集，对单个字符给出取值范围</td><td></td></tr>
-    <tr><td>^</td><td>匹配字符串开头</td><td></td></tr>
-    <tr><td>$</td><td>匹配字符串结尾</td><td></td></tr>
-    <tr><td>*</td><td>匹配前面的字符零次或多次</td><td></td></tr>
-    <tr><td>+</td><td>匹配前面的字符一次或多次</td><td></td></tr>
-    <tr><td>?</td><td>匹配前面的字符零次或一次</td><td></td></tr>
-    <tr><td>{n}</td><td>匹配前面的字符n次</td><td>ab(2)c->abbc</td></tr>
-    <tr><td>{n,m}</td><td>匹配前面的字符n到m次</td><td>ab{1，2}c表示abc、abbc</td></tr>
-    <tr><td>|</td><td>逻辑或</td><td></td></tr>
-    <tr><td>()</td><td>分组</td><td></td></tr>
-</table>
-
-<h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h3><p>包含一个或多个数字，包含多个任意的字符</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/^\d+[a-z]+[A-Z]+$/</span><br><span class="line">&lt;!-- ps:125akoAFJD --&gt;</span><br></pre></td></tr></table></figure>
-
-<p>前瞻运算符，常用于密码校验</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/^(?=.*\d+)(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[@_.,]+)[\da-zA-Z@_.,]&#123;6,12&#125;$/</span><br></pre></td></tr></table></figure>
-
-<p>匹配中文字符</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[u4e00-\u9fa5]</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>sass基础</title>
     <url>/posts/dbaac36c.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://sass-lang.com/">sass</a> 是一个 CSS 预处理语言，完全兼容CSS，扩展了CSS的能力，<br>增加了变量、嵌套规则、混合（Mixins）等功能。SASS有两种语<br>法：缩进式（Indented）和紧凑式（Strict）。缩进式语法类似<br>于Python，使用缩进来定义块；而紧凑式语法则更接近传统的CSS。</p>
@@ -107,6 +66,47 @@
       </categories>
       <tags>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/posts/2f57a694.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><pre><code>正则表达式是一种描述字符组合的模式，能匹配、替换、提取文本，多用于验证表单输入，解析文本文件等任务。
+</code></pre>
+<h3 id="在线测试工具"><a href="#在线测试工具" class="headerlink" title="在线测试工具"></a>在线测试工具</h3><p><a href="https://www.jyshare.com/front-end/854/">菜鸟工具</a></p>
+<h3 id="语法教程参考"><a href="#语法教程参考" class="headerlink" title="语法教程参考"></a>语法教程参考</h3><p><a href="https://www.runoob.com/regexp/regexp-syntax.html">菜鸟教程</a></p>
+<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><table border="1" cellspacing = "0" cellpadding = "5" width="100%" >
+    <tr><td>操作符</td><td>说明</td><td>实例</td></tr>
+    <tr><td>.</td><td>标识任何单个字符</td><td>[abc]表示a,b,c,[a-z]表示a-z单个字符</td></tr>
+    <tr><td>\d</td><td>匹配数字</td><td>\d表示匹配一个数字，[0-9]表示匹配0-9</td></tr>
+    <tr><td>\D</td><td>匹配非数字</td><td>\D表示匹配非数字，[^0-9]表示匹配非0-9</td></tr>
+    <tr><td>\w</td><td>匹配字母数字下划线</td><td>\w表示匹配字母数字下划线，[a-zA-Z0-9_]表示匹配a-zA-Z0-9_</td></tr>
+    <tr><td>[]</td><td>字符集，对单个字符给出取值范围</td><td></td></tr>
+    <tr><td>^</td><td>匹配字符串开头</td><td></td></tr>
+    <tr><td>$</td><td>匹配字符串结尾</td><td></td></tr>
+    <tr><td>*</td><td>匹配前面的字符零次或多次</td><td></td></tr>
+    <tr><td>+</td><td>匹配前面的字符一次或多次</td><td></td></tr>
+    <tr><td>?</td><td>匹配前面的字符零次或一次</td><td></td></tr>
+    <tr><td>{n}</td><td>匹配前面的字符n次</td><td>ab(2)c->abbc</td></tr>
+    <tr><td>{n,m}</td><td>匹配前面的字符n到m次</td><td>ab{1，2}c表示abc、abbc</td></tr>
+    <tr><td>|</td><td>逻辑或</td><td></td></tr>
+    <tr><td>()</td><td>分组</td><td></td></tr>
+</table>
+
+<h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h3><p>包含一个或多个数字，包含多个任意的字符</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/^\d+[a-z]+[A-Z]+$/</span><br><span class="line">&lt;!-- ps:125akoAFJD --&gt;</span><br></pre></td></tr></table></figure>
+
+<p>前瞻运算符，常用于密码校验</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/^(?=.*\d+)(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[@_.,]+)[\da-zA-Z@_.,]&#123;6,12&#125;$/</span><br></pre></td></tr></table></figure>
+
+<p>匹配中文字符</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[u4e00-\u9fa5]</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
